@@ -1,0 +1,833 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goel & Sons Infratech - Premium Real Estate Buyer Leads</title>
+    
+    <meta name="description" content="Unlock exclusive, high-intent real estate buyer leads. Goel & Sons Infratech provides verified, premium leads from high-intent channels. Stop competing, start closing.">
+    <meta name="keywords" content="real estate leads, buyer leads, premium leads, exclusive leads, Goel & Sons Infratech, high-intent leads, Google AdWords leads">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* --- 1. Global & Variables --- */
+        :root {
+            --color-gold: #d4af37; /* Premium Gold */
+            --color-dark-blue: #040c18; /* Deep Navy/Black from logo */
+            --color-light-blue: #00c6ff; /* Accent glow */
+            --color-white: #f0f4f8;
+            --color-grey: #a9b3c1;
+            
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Lato', sans-serif;
+            
+            --shadow-light: 0 4px 15px rgba(0, 198, 255, 0.1);
+            --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-dark-blue);
+            color: var(--color-white);
+            font-family: var(--font-body);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 3rem; line-height: 1.2; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 1.5rem; color: var(--color-gold); }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--color-grey);
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-gold);
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--color-light-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* --- 2. Reusable Components --- */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn--primary {
+            background-color: var(--color-gold);
+            color: var(--color-dark-blue);
+            border-color: var(--color-gold);
+        }
+        .btn--primary:hover {
+            background-color: transparent;
+            color: var(--color-gold);
+        }
+
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+        .btn--secondary:hover {
+            background-color: var(--color-white);
+            color: var(--color-dark-blue);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .section-header h3 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-top: 0.5rem;
+        }
+        .section-header h2 span {
+            color: var(--color-gold);
+        }
+
+        /* --- 3. Header & Navigation --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(4, 12, 24, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .header__logo img {
+            height: 50px; /* Adjust height as needed */
+        }
+
+        .header__nav-list {
+            display: flex;
+            list-style: none;
+        }
+
+        .header__nav-item {
+            margin-left: 2rem;
+        }
+
+        .header__nav-link {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--color-white);
+            padding: 0.5rem;
+        }
+        .header__nav-link:hover {
+            color: var(--color-gold);
+        }
+        .header__nav-link.btn {
+            margin-left: 2rem;
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .header__nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--color-white);
+            cursor: pointer;
+        }
+
+        /* --- 4. Hero Section --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px; /* Offset for fixed header */
+            background: radial-gradient(circle, rgba(10, 25, 47, 0.8), var(--color-dark-blue) 70%);
+        }
+
+        .hero__content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero__content h1 span {
+            display: block;
+            color: var(--color-gold);
+        }
+
+        .hero__content p {
+            font-size: 1.25rem;
+            color: var(--color-grey);
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+        }
+        
+        .hero__cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        /* --- 5. Why Choose Us Section --- */
+        .why-us {
+            background-color: rgba(10, 25, 47, 0.3);
+        }
+        
+        .why-us__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-us__card {
+            background: var(--color-dark-blue);
+            padding: 2.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+        .why-us__card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-gold);
+        }
+
+        .why-us__card-icon {
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .why-us__card h4 {
+            font-size: 1.3rem;
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- 6. Our Process Section --- */
+        .process__timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* The vertical line */
+        .process__timeline::after {
+            content: '';
+            position: absolute;
+            width: 3px;
+            background-color: var(--color-gold);
+            opacity: 0.3;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1.5px;
+        }
+
+        .process__item {
+            padding: 1rem 3rem;
+            position: relative;
+            width: 50%;
+        }
+        
+        /* The circle on the timeline */
+        .process__item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--color-gold);
+            border: 4px solid var(--color-light-blue);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        /* Left items */
+        .process__item--left {
+            left: 0;
+            text-align: right;
+        }
+
+        /* Right items */
+        .process__item--right {
+            left: 50%;
+        }
+        .process__item--right::after {
+            left: -10px;
+        }
+        
+        .process__item-content {
+            padding: 1.5rem;
+            background: rgba(10, 25, 47, 0.5);
+            border-radius: 8px;
+            border: 1px solid #1a2e47;
+        }
+        .process__item-content h4 {
+            color: var(--color-gold);
+            font-size: 1.3rem;
+        }
+
+        /* --- 7. Services Section --- */
+        .services {
+            background-color: rgba(10, 25, 47, 0.3);
+        }
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .services__card {
+            background: var(--color-dark-blue);
+            padding: 2.5rem;
+            border-radius: 10px;
+            border-bottom: 5px solid var(--color-gold);
+            box-shadow: var(--shadow-light);
+        }
+        
+        .services__card-icon {
+            font-size: 3rem;
+            color: var(--color-light-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        .services__card h4 {
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+
+        /* --- 8. Testimonials Section --- */
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: rgba(10, 25, 47, 0.5);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-gold);
+            position: relative;
+        }
+        
+        .testimonial-card__quote-icon {
+            font-size: 2rem;
+            color: var(--color-gold);
+            opacity: 0.5;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .testimonial-card__text {
+            font-style: italic;
+            color: var(--color-grey);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card__author {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--color-white);
+        }
+        
+        .testimonial-card__title {
+            font-size: 0.9rem;
+            color: var(--color-gold);
+        }
+
+        /* --- 9. Final CTA Section --- */
+        .cta {
+            background: linear-gradient(to right, var(--color-gold), #b8860b);
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            color: var(--color-dark-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            color: #0a192f;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+        
+        .cta .btn {
+            background: var(--color-dark-blue);
+            color: var(--color-white);
+            border-color: var(--color-dark-blue);
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+        }
+        .cta .btn:hover {
+            background: transparent;
+            color: var(--color-dark-blue);
+        }
+
+        /* --- 10. Footer --- */
+        .footer {
+            padding: 4rem 0 2rem 0;
+        }
+        
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer__logo img {
+            height: 60px;
+            margin-bottom: 1rem;
+        }
+        
+        .footer__about p {
+            max-width: 400px;
+            color: var(--color-grey);
+        }
+
+        .footer__title {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--color-white);
+            margin-bottom: 1rem;
+        }
+        
+        .footer__list {
+            list-style: none;
+        }
+        
+        .footer__list li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer_list a, .footer_list span {
+            color: var(--color-grey);
+            font-size: 1rem;
+        }
+        .footer__list a:hover {
+            color: var(--color-gold);
+            padding-left: 5px;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .footer__social a {
+            font-size: 1.5rem;
+            color: var(--color-grey);
+        }
+        
+        .footer__copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-grey);
+            font-size: 0.9rem;
+        }
+        
+        /* --- 11. Mobile Responsiveness --- */
+        @media (max-width: 992px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero__content h1 { font-size: 3rem; }
+            
+            .services__grid { grid-template-columns: 1fr; }
+            
+            .footer__grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer__about p { margin: 0 auto 1.5rem auto; }
+            .footer__social { justify-content: center; }
+        }
+        
+        @media (max-width: 768px) {
+            /* Mobile Nav */
+            .header__nav-list {
+                position: fixed;
+                top: 75px; /* Height of header */
+                right: -100%; /* Start off-screen */
+                width: 100%;
+                height: calc(100vh - 75px);
+                background: var(--color-dark-blue);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 3rem;
+                transition: right 0.4s ease-in-out;
+            }
+            .header__nav-list.active {
+                right: 0;
+            }
+            .header__nav-item {
+                margin: 1.5rem 0;
+            }
+            .header__nav-link {
+                font-size: 1.2rem;
+            }
+            .header__nav-toggle {
+                display: block;
+            }
+            
+            .hero__content h1 { font-size: 2.5rem; }
+            .hero__content p { font-size: 1.1rem; }
+            .hero__cta-buttons { flex-direction: column; }
+            
+            /* Process Timeline */
+            .process__timeline::after {
+                left: 10px;
+            }
+            .process__item {
+                width: 100%;
+                padding-left: 3rem;
+                padding-right: 1rem;
+            }
+            .process_item--left, .process_item--right {
+                left: 0%;
+                text-align: left;
+            }
+            .process__item::after {
+                left: 0px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="header__nav">
+            <a href="#hero" class="header__logo">
+                <img src="logo1.jpg" alt="Goel & Sons Infratech Logo"><h3>Goel & Sons Infratech</h3>
+            </a>
+            <ul class="header__nav-list" id="nav-menu">
+                <li class="header_nav-item"><a href="#hero" class="header_nav-link">Home</a></li>
+                <li class="header_nav-item"><a href="#why-us" class="header_nav-link">Why Us</a></li>
+                <li class="header_nav-item"><a href="#process" class="header_nav-link">Our Process</a></li>
+                <li class="header_nav-item"><a href="#services" class="header_nav-link">Our Leads</a></li>
+                <li class="header_nav-item"><a href="#testimonials" class="header_nav-link">Testimonials</a></li>
+                <li class="header__nav-item"><a href="#contact" class="btn btn--primary">Get Quote</a></li>
+            </ul>
+            <div class="header__nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container hero__content">
+<br><br><br><br>
+                <h1>Unlock Premium Buyer Leads. <span>Exclusively Yours!</span></h1>
+
+                <p>
+                    Tired of stale leads from crowded portals? We deliver pre-qualified, exclusive buyers sourced from high-intent channels. Stop competing. Start closing.
+                </p>
+                <div class="hero__cta-buttons">
+                    <a href="#contact" class="btn btn--primary">Get Your Personalized Quote</a>
+                    <a href="#why-us" class="btn btn--secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us" id="why-us">
+            <div class="container">
+                <div class="section-header">
+                    <h3>The Goel & Sons Difference</h3>
+                    <h2>Why Partner <span>With Us?</span></h2>
+                </div>
+                
+                <div class="why-us__grid">
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-lock"></i></div>
+                        <h4>Exclusivity Guaranteed</h4>
+                        <p>Never share a lead again. Unlike portals that sell one lead to 100+ brokers, our leads are 100% exclusive to you.</p>
+                    </div>
+                    
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-star"></i></div>
+                        <h4>Verified & Premium Quality</h4>
+                        <p>Every lead is pre-qualified and verified. You connect with genuine property buyers, not just window shoppers.</p>
+                    </div>
+
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-bullseye"></i></div>
+                        <h4>High-Intent Sources</h4>
+                        <p>No stale data from Facebook. Our leads are sourced from advanced Google AdWords (PPC) campaigns and high-intent channels.</p>
+                    </div>
+
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Risk-Free Replacement</h4>
+                        <p>We guarantee quality. Get a FREE replacement if a lead has a low budget, is looking in another city, or is a broker.</p>
+                    </div>
+                    
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Proven 10x ROI</h4>
+                        <p>Our partners achieve up to a 10x higher closure rate compared to industry-standard sources. Your success is our metric.</p>
+                    </div>
+
+                    <div class="why-us__card">
+                        <div class="why-us__card-icon"><i class="fas fa-headset"></i></div>
+                        <h4>Dedicated 24/7 Support</h4>
+                        <p>Our expert team is always available to help you nurture and convert. We're your partners in growth, not just a vendor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="process" id="process">
+            <div class="container">
+                <div class="section-header">
+                    <h3>How We Do It</h3>
+                    <h2>Our High-Intent <span>Sourcing Process</span></h2>
+                </div>
+                
+                <div class="process__timeline">
+                    <div class="process_item process_item--left">
+                        <div class="process__item-content">
+                            <h4>1. Precision Targeting</h4>
+                            <p>We launch advanced Google AdWords (PPC) and similar high-intent campaigns, targeting active buyers searching for property right now.</p>
+                        </div>
+                    </div>
+                    <div class="process_item process_item--right">
+                        <div class="process__item-content">
+                            <h4>2. Rigorous Verification</h4>
+                            <p>Our expert team manually verifies every lead. We qualify for budget, desired location, and purchase intent before it ever reaches you.</p>
+                        </div>
+                    </div>
+                    <div class="process_item process_item--left">
+                        <div class="process__item-content">
+                            <h4>3. Exclusive Delivery</h4>
+                            <p>The verified, high-quality lead is delivered in real-time only to you. You are the first and only professional they will speak with.</p>
+                        </div>
+                    </div>
+                    <div class="process_item process_item--right">
+                        <div class="process__item-content">
+                            <h4>4. Support & Conversion</h4>
+                            <p>We provide dedicated 24/7 support to help you with nurturing strategies, ensuring you have the best possible chance to close the deal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h3>What We Offer</h3>
+                    <h2>Tailored Leads <span>For Your Niche</span></h2>
+                    <p>We don't do "one-size-fits-all". We provide customized lead packages to match your specific needs.</p>
+                </div>
+                
+                <div class="services__grid">
+                    <div class="services__card">
+                        <div class="services__card-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <h4>Location / Budget Specific Leads</h4>
+                        <p>Ideal for capturing general market demand. Receive a steady stream of verified buyers based on their preferred location (e.g., "South Delhi") and budget bracket (e.g., "₹1 Cr to ₹3 Cr").</p>
+                    </div>
+                    <div class="services__card">
+                        <div class="services__card-icon"><i class="fas fa-building"></i></div>
+                        <h4>Project Specific Leads</h4>
+                        <p>Perfect for developers or project mandates. Get highly-qualified prospects who are interested in a specific, named project (e.g., "The Elite Project Navigator"). These leads have a higher closure rate.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Social Proof</h3>
+                    <h2>What Our Partners <span>Say</span></h2>
+                </div>
+                
+                <div class="testimonials__grid">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right testimonial-card__quote-icon"></i>
+                        <p class="testimonial-card__text">"Goel & Sons changed the game. The lead quality is unlike anything from the common portals. The exclusivity means I'm the first and only call. My closure rate has tripled."</p>
+                        <div class="testimonial-card__author">A. Sharma</div>
+                        <div class="testimonial-card__title">Top Broker, DLF</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right testimonial-card__quote-icon"></i>
+                        <p class="testimonial-card__text">"We stopped wasting money on shared leads. The 'Project Specific' package delivered genuine buyers for our new launch. The replacement guarantee is real, though we rarely need it."</p>
+                        <div class="testimonial-card__author">R. Singh</div>
+                        <div class="testimonial-card__title">Director, Real-Estate Agency</div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-right testimonial-card__quote-icon"></i>
+                        <p class="testimonial-card__text">"The professionalism and support are outstanding. They aren't just a vendor; they are partners. The ROI is undeniable. 10/10 would recommend to any serious real estate professional."</p>
+                        <div class="testimonial-card__author">P. Mehta</div>
+                        <div class="testimonial-card__title">Independent Developer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <div class="container">
+                <h2>Ready to Upgrade Your Pipeline?</h2>
+                <p>Stop paying for shared, low-quality data. Invest in a dedicated stream of verified, exclusive buyers. Contact us today for a personalized quote tailored to your exact needs.</p>
+                <a href="https://wa.me/919350673929" target="_blank" class="btn">
+                    <i class="fab fa-whatsapp"></i> Get Quote on WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__about">
+                    <a href="#hero" class="footer__logo">
+                        <img src="logo1.jpg" alt="Goel & Sons Infratech Logo"><h3>Goel & Sons Infratech</h3>
+                    </a>
+                    <p>Your exclusive gateway to premium, high-intent real estate buyer leads. We connect you with genuine buyers, so you can focus on what you do best: closing deals.</p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__list">
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#services">Our Leads</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4 class="footer__title">Contact Us</h4>
+                    <ul class="footer__list">
+                        <li><i class="fas fa-phone"></i> <span>9205130459</span></li>
+                        <li><i class="fas fa-phone"></i> <span>7840059874</span></li>
+                        <li><i class="fas fa-phone"></i> <span>9350673929</span></li>
+                        <li><i class="fas fa-phone"></i> <span>9315542732</span></li>
+                    </ul>
+                    <div class="footer__social">
+                        <a href="https://wa.me/919350673929" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/goelleads/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/17cYYfAuKx/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__copyright">
+                &copy; <span id="year"></span> Goel & Sons Infratech. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* Mobile Nav Toggle */
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.header__nav-link');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                // Toggle burger icon
+                navToggle.classList.toggle('fa-bars');
+                navToggle.classList.toggle('fa-times');
+            });
+        }
+        
+        /* Close menu when a link is clicked */
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.add('fa-bars');
+                    navToggle.classList.remove('fa-times');
+                }
+            });
+        });
+
+        /* Dynamic Year for Copyright */
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        /* Change header style on scroll */
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.5)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+            }
+        });
+    </script>
+
+</body>
+</html>
